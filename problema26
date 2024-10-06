@@ -1,0 +1,14 @@
+class Solution:
+    def removeDuplicates(self, list: List[int]) -> int:
+        indexOfNewList = 0
+
+        for i in range(0, len(list) - 1, 1):
+            if list[i] < list[i + 1]:
+                list[indexOfNewList] = list[i]
+                indexOfNewList = indexOfNewList + 1
+            else:
+                pass
+
+        list[indexOfNewList] = list[-1]
+
+        return indexOfNewList + 1
