@@ -1,0 +1,12 @@
+class Solution:
+    def finalValueAfterOperations(self,list) -> int:
+        X = 0
+
+        for i in range(0, len(list), 1):
+            if list[i][1] == '+' :
+                X += 1
+            elif list[i][1] == '-':
+                X -= 1
+        return X
+
+//complexity O(n)
